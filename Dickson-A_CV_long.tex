@@ -1,0 +1,466 @@
+\documentclass[margin,line]{res}
+\usepackage{setspace}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr,url}
+\usepackage{pagecounting}
+
+\makeatletter
+%\renewcommand\@biblabel[1]{\textbullet}
+\makeatother
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{blue}{rgb}{0.2,0.2,0.9}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0.05in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0.03in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0.05in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[C]{\textcolor{gray}{A. Dickson - Curriculum Vitae -- Page \thepage~}~~~~~~~~~~~~~~~~~~~~~~~}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+\pagestyle{plain}
+
+\begin{document}
+
+\name{\Large {\bf Alex Dickson} \vspace*{.1in}}
+
+\begin{resume}
+\section{\sc \textcolor{blue}{Contact Information}}
+\vspace{.05in}
+\begin{tabular}{@{}p{2in}p{4in}}
+603 Wilson Rd             & {\it Voice:}  (517) 884-8985 \\            
+Office 310B               & {\it Web:} \url{www.egr.msu.edu/~alexrd} \\         
+East Lansing, MI 48824  & {\it E-mail:}  alexrd@msu.edu\\
+USA & {\it Twitter:} \url{@DicksonLab}\\
+\end{tabular}
+
+\section{\sc \textcolor{blue}{ Goals}}
+{\bf{\emph{To apply novel tools and techniques from molecular simulation to biological systems relevant to human disease.}}}
+
+\section{\sc \textcolor{blue}{ Specific Areas \\ of Interest}}
+MD-driven drug development, biological systems modeling, network analysis, chaperone-mediated folding,
+association of protein complexes, developing new methods for computer simulation of molecular systems, parallel programming, systems driven out of equilibrium, dynamical phase transitions
+
+\section{\sc \textcolor{blue}{ Education and Experience}}
+{\bf Michigan State University}, East Lansing, MI\\
+\vspace {-0.05in}
+\begin{list1}
+\item[] {\bf Assistant Professor}, Department of Biochemistry and Molecular Biology, September 2015--Present
+\begin{list2}
+\item {Joint appointment with the Department of Computational Mathematics, Science and Engineering}
+\end{list2}
+\end{list1}
+
+{\bf University of Michigan}, Ann Arbor, MI\\
+\vspace {-0.05in}
+\begin{list1}
+\item[] {\bf Postdoctoral Fellow}, Department of Chemistry, September 2011--August 2015
+\item[] Primary Mentor:  Charles L. Brooks, III
+\begin{list2}
+\item {Studied relative path probabilities to elucidate mechanisms of chaperone activity in \textit{E. coli}}
+\item {Developed analysis techniques (``hub scores'') to elucidate high-level behaviors in complex networks}
+\item {Created and applied new custom enhanced sampling methods to explore new areas of configuration space in high-dimensional order parameter spaces (``WExplore'')}
+\item {Elucidated mechanisms of interaction for the intrinsically disordered chaperone HdeA}
+\end{list2}
+\end{list1}
+
+{\bf University of Chicago}, Chicago, IL\\
+\vspace {-0.05in}
+\begin{list1}
+\item[] {{\bf Ph.D.}, Department of Chemistry, July 2011}
+\item[] {Dissertation Topic:  \textit{``Enhanced sampling methods for nonequilibrium systems''}}
+\item[] {Advisor:  Aaron R. Dinner}
+\begin{list2}
+\item {Developed enhanced sampling methods to study systems driven out of equilibrium (``nonequilibrium umbrella sampling'')}
+\item {Ran massively parallel simulations on supercomputing architectures}
+\item {Studied dynamical phase transitions using large deviation theory}
+\end{list2}
+\item[] {{\bf M.S.}, Chemistry,  May 2007}
+\end{list1}
+
+{\bf University of Toronto}, Ontario, Canada\\
+\vspace {-0.05in}
+\begin{list1}
+\item[] {\bf Hon. B. Sc.}, Chemical Physics (Minor: Mathematics),  May 2006
+\item[] {Thesis:  \textit{``The effect of trajectory accuracy on statistical distributions in chaotic systems''}}
+\end{list1}
+
+\section{\sc \textcolor{blue}{ Personal Information}}
+I am a dual Canadian-American citizen.
+
+\newpage
+\section{\sc \textcolor{blue}{Publications}}
+
+%\setlength\bibitemsep{1.5\itemsep}
+
+\emph{[*] = corresponding author}
+\vspace {0.05in}
+
+\begingroup
+\begin{spacing}{1.2}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\setlength{\itemsep}{0.15in}
+
+\bibitem{Bai2019}
+  Bai N, Roder H, {\bf Dickson A} and Karanicolas J* (2019) Isothermal Analysis of ThermoFluor Data can readily provide Quantitative Binding Affinities.
+  \newblock \textit{Scientific Reports} In Press.
+
+\bibitem{Dickson2018}
+  {\bf Dickson A*} (2018) Mapping the Ligand Binding Landscape.
+  \newblock \textit{Biophysical Journal} https://doi.org/10.1016/j.bpj.2018.09.021.
+
+\bibitem{Dixon2018}
+  Dixon T, Lotz SD, {\bf Dickson A*} (2018)
+  Predicting Ligand Binding Affinity Using On- and Off-Rates for the SAMPL6 SAMPLing Challenge.
+  \newblock \textit{Journal of Computer-Aided Molecular Design} https://doi.org/10.1007/s10822-018-0149-3. {\bf **Cover article**}
+
+\bibitem{Zeng2018}
+  Zeng X, Uyar A, Sui D, Donyapour N, Wu D, {\bf Dickson A*}, Hu J* (2018)
+  Structural Insights Into Lethal Contractural Syndrome Type 3 (LCCS3) Caused by a Missense Mutation of PIP5Ky.
+  \newblock \textit{Biochemical Journal} 475: 2257-2269.
+
+\bibitem{Lotz2017}
+  Lotz SD and {\bf Dickson A*} (2018)
+  Unbiased Molecular Dynamics of 11 min Timescale Drug Unbinding Reveals Transition State Stabilizing Interactions.
+\newblock \textit{Journal of the American Chemical Society} 140: 618-628.
+
+\bibitem{Wood2017}
+  Wood RJ, Ormsby AR, Radwan M, Cox D, Sharma A, Vopel T, Ebbinghaus S, Oliveberg M, Reid GE, {\bf Dickson A}, Hatters DM* (2018)
+  A Biosensor-Based Framework to Measure Latent Proteostasis Capacity.
+\newblock \textit{Nature Communications} 9:287.
+
+\bibitem{Uyar2017}
+Uyar A, Karamyan VT and {\bf Dickson A*} (2018)
+Long-Range Changes in Neurolysin Dynamics Upon Inhibitor Binding.
+\newblock \textit{Journal of Chemical Theory and Computation} 14: 444-452.
+
+\bibitem{Dickson2017_review}
+  {\bf Dickson A*}, Tiwary P and Vashisth H (2017)
+Kinetics of Ligand Binding Through Advanced Computational Approaches: A Review.
+\newblock \textit{Current Topics in Medicinal Chemistry} 17: 2626-2641.
+
+\bibitem{Dickon2016_tryp}
+{\bf Dickson A*}, Lotz SD (2017)
+Multiple Unbinding Pathways and Ligand-Induced Destabilization Revealed by WExplore and Conformation Space Networks.
+\newblock \textit{Biophysical Journal} 112: 620-629. 
+
+\bibitem{Dickon2016_csa}
+{\bf Dickson A*}, Bailey CT and Karanicolas J (2016)
+Optimal Allosteric Stabilization Sites Using Contact Stabilization Analysis.
+\newblock \textit{Journal of Computational Chemistry} 38: 1138-1146.
+
+\bibitem{Salmon2016}
+Salmon L, Ahlstrom LS, Horowitz S, {\bf Dickson A}, Brooks~{III} CL*, Bardwell, JCA* (2016)
+Capturing a dynamic chaperone-substrate interaction using NMR-informed molecular modeling.
+\newblock \textit{Journal of the American Chemical Society} 138: 9826-9839.
+\bibAnnoteFile{Salmon2016}
+
+\bibitem{Dickson2016}
+{\bf Dickson A*}, Lotz SD (2016)
+Ligand Release Pathways Obtained with WExplore: Residence Times and Mechanisms.
+\newblock \textit{Journal of Physical Chemistry B} 120: 5377-5385. 
+\bibAnnoteFile{Dickson2016}
+
+\bibitem{Dickson_WEUS}
+{\bf Dickson A}, Ahlstrom LS, Brooks~{III} CL* (2015)
+Coupled Folding and Binding with 2D Window-Exchange Umbrella Sampling.
+\newblock \textit{Journal of Computational Chemistry} 37: 587-594. {\bf **Cover article**}
+\bibAnnoteFile{Dickson_WEUS}
+
+\bibitem{Ahlstrom2015}
+Ahlstrom LS, Law S, {\bf Dickson A}, Brooks~{III} CL* (2015)
+Multiscale Modeling of a Conditionally Disordered {pH}-Sensing Chaperone
+\newblock \textit{Journal of Molecular Biology} 427: 1670-1680. 
+\bibAnnoteFile{Ahlstrom2015}
+
+\bibitem{Laricheva2015}
+Laricheva E, Goh G, {\bf Dickson A}, Brooks~{III} CL* (2015)
+{pH}-Dependent Transient Conformational States Control Optical Properties in Cyan Fluorescent Protein
+\newblock \textit{Journal of the American Chemical Society} 137: 2892-2900. 
+\bibAnnoteFile{Laricheva2015}
+
+\bibitem{Dickson_TAR}
+{\bf Dickson A}, Mustoe AM, Salmon L, Brooks~{III} CL* (2014)
+ Efficient In-Silico Exploration of {RNA} Interhelical Conformations Using Euler Angles and {WE}xplore.
+\newblock \textit{Nucleic Acids Research} 42: 97-110.
+\bibAnnoteFile{Dickson_TAR}
+
+\bibitem{Dickson_WExplore}
+{\bf Dickson A}, Brooks~{III} CL* (2014) {WE}xplore: Hierarchical
+  exploration of high dimensional spaces using the weighted ensemble algorithm.
+\newblock \textit{Journal of Physical Chemistry B} 118: 3532-3542. {\bf **Cover article**}
+\bibAnnoteFile{Dickson_WExplore}
+
+\bibitem{Dickson2013_foldeco}
+{\bf Dickson A}, Brooks~{III} CL* (2013) Quantifying chaperone-mediated
+  transitions in the proteostasis network of {E}. coli.
+\newblock \textit{PLoS Computational Biology} 9: e1003324.
+\bibAnnoteFile{Dickson2013_foldeco}
+
+\bibitem{Dickson2013_hubshaw}
+{\bf Dickson A}, Brooks~{III} CL* (2013) {Native states of fast-folding proteins are
+  kinetic traps.}
+\newblock \textit{Journal of the American Chemical Society} 135: 4729--4734.
+\bibAnnoteFile{Dickson2013_hubshaw}
+
+\bibitem{Ahlstrom2013}
+  Ahlstrom LS, {\bf Dickson A}, Brooks~{III} CL* (2013)
+  Binding and Folding of the Small Bacterial Chaperone HdeA.
+\newblock \textit{Journal of Physical Chemistry B} 117: 13219-13225.
+\bibAnnoteFile{Ahlstrom2013}
+
+\bibitem{Dickson2012_hub}
+{\bf Dickson A}, Brooks~{III} CL* (2012) Quantifying hub-like behavior in protein
+  folding networks.
+\newblock \textit{Journal of Chemical Theory and Computation} 8: 3044--3052.
+\bibAnnoteFile{Dickson2012_hub}
+
+\bibitem{Dickson2011_ldf}
+{\bf Dickson A}, Tabei SMA, Dinner AR* (2011) {Entrainment of a driven oscillator as a
+  dynamical phase transition}.
+\newblock \textit{Physical Review E} 84: 061134.
+\bibAnnoteFile{Dickson2011_ldf}
+
+\bibitem{Dickson2011_RNA}
+{\bf Dickson A}, Maienschein-Cline M, Tovo-Dwyer A, Hammond JR, Dinner AR* (2011)
+  Flow-dependent unfolding and refolding of an {RNA} by nonequilibrium umbrella
+  sampling.
+\newblock \textit{Journal of Chemical Theory and Computation} 7: 2710--2720.
+\bibAnnoteFile{Dickson2011_RNA}
+
+\bibitem{Dickson2010_shear}
+{\bf Dickson A}, Nasto A, Dinner AR* (2010) {Incorporating friction and collective
+  shear moves into a lattice gas.}
+\newblock \textit{Physical Review E} 81: 051111.
+\bibAnnoteFile{Dickson2010_shear}
+
+\bibitem{Dickson2010_review}
+{\bf Dickson A}, Dinner AR* (2010) Enhanced sampling of nonequilibrium steady states.
+\newblock \textit{Annual Reviews of Physical Chemistry} 61: 441--459.
+\bibAnnoteFile{Dickson2010_review}
+
+\bibitem{Dickson2009_rate}
+{\bf Dickson A}, Warmflash A, Dinner AR* (2009) Separating forward and backward
+  pathways in nonequilibrium umbrella sampling.
+\newblock \textit{Journal of Chemical Physics} 131: 154104.
+\bibAnnoteFile{Dickson2009_rate}
+
+\bibitem{Dickson2009}
+{\bf Dickson A}, Warmflash A, Dinner AR* (2009) Nonequilibrium umbrella sampling in
+  spaces of many order parameters.
+\newblock \textit{Journal of Chemical Physics} 130: 074104.
+\bibAnnoteFile{Dickson2009}
+
+\end{thebibliography}
+\end{spacing}
+\endgroup
+
+\section{\sc \textcolor{blue}{Funding} }
+
+{\bf NIH NIGMS} R01 Grant \hfill {\bf 2018-2022} Total: \$1.3 M USD \\
+\emph{Mapping the ligand binding landscape with advanced molecular simulation methods}\\
+{\bf PI:} Alex Dickson (MSU)
+
+{\bf DMS/NIGMS} Research at the Interface of Bio. and Math. Sciences \hfill {\bf 2018-2022} Total: \$1.1 M USD \\
+ \emph{Kinetics-driven drug discovery using persistent homology, rare event molecular dynamics and experimental data}\\
+ {\bf Lead PI:} Alex Dickson (MSU), {\bf Co-PIs:} Guowei Wei (MSU), Kin Sing Stephen Lee (MSU)\\
+
+{\bf Human Frontiers Science Program}, Program Grant \hfill {\bf 2017-2020} Total: \$1.2 M USD \\
+ \emph{Defining the Capacity of Cells to Keep the Proteome Folded Over Space and Time}\\
+ {\bf Lead PI:} Danny Hatters (U. Melbourne), {\bf Co-PIs:} Alex Dickson (MSU), Hannah Nicholas (U. Sydney), Simon Ebbinghaus (Ruhr. Univ. Bochum) \\
+
+\section{\sc \textcolor{blue}{ Articles \\ Reviewed}}
+I have served as a referee for articles submitted to the journals \textit{Proceedings of the National Academy of Sciences}, \textit{Journal of Molecular Graphics and Modelling}, \textit{Journal of Computational Chemistry}, \textit{Biopolymers}, \textit{Journal of the American Chemical Society}, \textit{Computational Biology and Chemistry}, \textit{Frontiers in Bioengineering and Biotechnology}, \textit{PLoS Computational Biology}, \textit{Biophysical Journal} and \textit{Proteins: Structure, Function and Bioinformatics}.
+
+\section{\sc \textcolor{blue}{ Proposals \\ Reviewed}}
+        {\bf Ad hoc Reviewer}, NSF CAREER \hfill Chemistry of Life Processes, 2018. \\
+        {\bf Ad hoc Reviewer}, NSF CAREER \hfill Chemical Theory, Models and Computational Methods 2018. \\
+
+\section{\sc \textcolor{blue}{ Teaching }}
+
+{\bf BMB803/805} \hfill {\bf Spring 2019} \\
+\emph{Protein Structure, Design and Mechanism}, 11 lecture hours.\\
+A series of lectures on protein molecular biology: how does sequence determine function?
+
+{\bf CMSE201} \hfill {\bf Fall 2018} \\
+\emph{Introduction to Computational Modeling}, 60 lecture hours.\\
+Solo-taught one 70-student section.
+
+{\bf CMSE201} \hfill {\bf Fall 2017} \\
+\emph{Introduction to Computational Modeling}, 6 lecture hours.\\
+Taught three sections of a guest lecture on Langevin dynamics.
+
+{\bf BMB961/CMSE890} \hfill {\bf Spring 2017} \\
+\emph{Concepts in Protein Structure and Modeling}, 12 lecture hours.\\
+Co-taught with Dr. Michael Feig.
+Lectures and laboratories concerning enhanced sampling methods, clustering and kinetic modeling, and binding free energy calculations.
+
+{\bf CMSE801} \hfill {\bf Fall 2016} \\
+\emph{Introduction to Computational Modeling}, 24 lecture hours.\\
+Co-taught with Dr. Alexei Bazavov.
+Lectures and laboratories on creating physical and computational models; programming in Python; effective visualization of data; working in teams to computationally solve scientific problems.
+
+{\bf NSC801} \hfill {\bf Spring 2016} \\
+\emph{Introduction to Computational Modeling}, 24 lecture hours.\\
+Co-taught with Dr. Mohsen Zayernouri.
+Lectures and laboratories on creating physical and computational models; programming in Python; effective visualization of data; working in teams to computationally solve scientific problems.
+All of the course material was developed from scratch by myself and Dr. Zayernouri.
+
+\section{\sc \textcolor{blue}{ Invited Talks }}
+
+{\bf Physics Seminar}, Oakland University, December 2018.\\
+{\bf Chemistry Seminar}, William Paterson University, October 2018.\\
+{\bf WExplore lecture @ WESTPA Workshop}, University of Pittsburgh, August 2018.\\
+{\bf WExplore plugin tutorial @ WESTPA Workshop}, University of Pittsburgh, August 2018.\\
+{\bf Mid-Atlantic Comp Chem Meeting} (via web) with Merck, GlaxoSmithKline, Bristol-Myers Squibb, and Pfizer, March 2018. \\
+{\bf Seminar}, Department of Computational \& Systems Biology, University of Pittsburgh, September 2017. \\
+{\bf Modeling \& Measuring Protein-Ligand Kinetics \& Residence Times}, ACS Meeting, August 2017. \\
+{\bf Physical Chemistry Seminar}, Michigan State University, September 2016. \\
+{\bf Charlie Brooks 60th Birthday Celebration}, ACS Meeting, March 2016. \\
+{\bf Pharmacology \& Toxicology Seminar}, Michigan State University, February 2016. \\
+{\bf Computer Science and Engineering Seminar}, Michigan State University, October 2015. \\
+{\bf WESTPA Workshop}, University of Pittsburgh, July 2015. \\
+{\bf University of British Columbia, Okanagan Campus}, Department of Chemistry, February 2015. \\
+{\bf Michigan State University}, Department of Biochemistry and Molecular Biology, February 2015. \\
+{\bf IUPUI}, Department of Chemistry, February 2015. \\
+{\bf University of Texas, El Paso}, Department of Chemistry, December 2014. \\
+{\bf University at Buffalo}, Department of Chemistry, November 2014. \\
+{\bf Protein Folding Consortium} in Ann Arbor, MI, June 2014. \\
+{\bf Washington University St. Louis}, Department of Biochemistry and Molecular Biophysics, March 2014. \\
+{\bf Protein Folding Consortium Workshop} in Berkeley, June 2013. \\
+{\bf After Mini Mini} for path sampling methods in Berkeley, Jan 2010. \\
+{\bf Multiscale Materials Modeling} in Tallahassee, Oct 2008. \\
+
+\section{\sc \textcolor{blue}{ Contributed Talks and \\ Poster Sessions}}
+
+{\bf Free Energy Methods, Kinetics and Markov State Models in Drug Design}, Cambridge, May 2018. \\
+{\bf Binding Kinetics: Time is of the Essence}, Berlin, October 2017.\\
+{\bf ACS Meeting}, Washington DC, August 2017. \\
+{\bf ACS Meeting}, San Francisco, April 2017. \\
+{\bf Biophysical Society Meeting}, Los Angeles, February 2016. \\
+{\bf q-bio Winter Meeting} in Hawaii, February 2014. \\
+
+%\vspace*{-2.5mm}
+
+%\newpage
+
+\section{\sc \textcolor{blue}{ Honors and Awards} }
+{\bf Elizabeth R. Norton Prize for Excellence in Research in Chemistry}, University of Chicago, 2010. \\
+{\bf Postgraduate Scholarship}, Natural Sciences and Engineering Research Council of Canada (NSERC), 2007-2011.\\
+{\bf Freud Scholar Fellowship}, University of Chicago, 2006. \\
+{\bf Undergraduate Student Research Award}, NSERC, 2005. \\
+{\bf Undergraduate Student Research Award}, NSERC, 2004. \\
+{\bf Susan C. Gollop and William G. Gollop Scholarship in Chemistry}, University of Toronto, 2002-2003. \\
+
+\section{\sc \textcolor{blue}{Service}}
+{\bf Organizer}, Midwest Computational Chemistry Conference, East Lansing, MI, June 2017. \\
+{\bf Organizer}, BMB Departmental Retreat, East Lansing, MI, September 2016. \\
+{\bf Organizer}, Computational Biology Symposium, Ann Arbor, MI, September 2016. \\
+{\bf Session chair}, Biophysical Society Meeting: Protein-Small Molecule Interactions, Los Angeles, February 2016. \\
+{\bf Session chair}, Gordon Research Seminar: Computational Chemistry, July 2014. \\
+
+\section{\sc \textcolor{blue}{Community Outreach}}
+        {\bf MSU Science Festival}, Abrams Planetarium \hfill {\bf 2016-2018} \\
+        \emph{Small Molecules on the Big Screen} (2018)\\
+        \emph{Small Molecules on the Big Screen} (2017)\\
+        \emph{What Happens to Molecules When You Turn Up the Heat?} (2016)\\
+        40-min talks with dome-formatted molecular visualizations designed to appeal to younger audiences.  Topics include: phase transitions (ice $\rightarrow$ water $\rightarrow$ steam), DNA synthesis, destabilizing protein mutations, molecular definition of temperature.
+
+        {\bf MSU Grandparents' University} \hfill {\bf 2016-2017} \\
+        \emph{How Do Molecules Find Their Perfect Fit?}\\
+        Taught two 1.5 hr lectures for children and their grandparents, employing 3D printed models of proteins to demonstrate key principles of molecular interaction.  Topics included: assembly of viral capsids, molecular recognition, protein conformational change.
+
+\section{\sc \textcolor{blue}{ Departmental Service}}
+        
+        {\bf Computer committee}, BMB, Michigan State University \hfill {\bf 2018-Present}\\
+        {\emph {Chair}}
+
+        {\bf Undergraduate Studies Committee}, CMSE, Michigan State University \hfill {\bf 2017-Present}\\
+        {\emph {Member}}
+
+        {\bf Faculty Advisory Committee}, BMB, Michigan State University \hfill {\bf 2018}\\
+        {\emph {Ad Hoc Member}}
+
+        {\bf Search Committee, Fixed Term Assistant Professor}, Mathematics, Michigan State University \hfill {\bf 2018}\\
+        {\emph {Member}}
+        
+        {\bf Computer Committee}, BMB, Michigan State University \hfill {\bf 2015-2017}\\
+        {\emph {Member}}
+
+        {\bf Committee on Undergraduate Minor}, CMSE, Michigan State University \hfill {\bf 2015-2017}\\
+        {\emph {Member}}
+
+{\bf Tiger Talks}, Department of Chemistry, University of Chicago
+
+\vspace{-.3cm}
+{\em Co-chair, Graphic Designer} \hfill {\bf 2009-2010}\\
+Ran a series of talks featuring senior graduate students presenting to an audience of their peers.
+
+{\bf PSD Social Committee}, Physical Sciences Division, University of Chicago
+
+\vspace{-.3cm}
+{\em Beer Baron} \hfill {\bf 2007-2009}\\
+Helped organize many social events for graduate students in the PSD, including a weekly happy
+hour. Responsibilities included sampling and purchasing craft beers from local breweries.
+
+{\bf Student Seminar Series}, Department of Chemistry, University of Chicago
+
+\vspace{-.3cm}
+{\em Co-creator, Student Interviewer} \hfill {\bf 2007}\\
+The goal of this seminar series was to provide junior graduate students with an intimate window into
+the lives of accomplished academics in chemistry. Two live, one-on-one interviews were conducted
+with Professors Harry Gray and Fraser Stoddart in front of an audience of graduate students.
+
+{\bf Chemistry Students' Union}, Department of Chemistry, University of Toronto
+
+\vspace{-.3cm}
+{\em President} \hfill {\bf 2005-2006}\\
+Along with a small group of students from my cohort, I transformed the CSU from a defunct
+organization to a vibrant, active team of students that is still in operation today. The CSU organizes
+social and academic events for undergraduate
+students in the Department of Chemistry.
+
+{\bf First-year Learning Communities}, University of Toronto
+
+\vspace{-.3cm}
+{\em Student Mentor} \hfill {\bf 2005-2006}\\
+Led a weekly course that helped integrate first-year students into undergraduate life.
+The course was designed to teach academic and personal skills that help students succeed in a University environment.
+Responsibilities included developing a curriculum, making lesson plans, and leading a class of 24 students.
+
+\end{resume}
+\end{document}
+
